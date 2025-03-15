@@ -1,0 +1,13 @@
+.scroll-container {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+.scroll-container {
+    -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
+    scrollbar-width: none; /* Untuk Firefox */
+}
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+  }
+    
