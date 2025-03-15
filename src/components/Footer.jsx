@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../assets/assets'
+import { toast } from 'react-toastify';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = () => {
+    if (!email) {
+    toast.error("Please enter a valid email address!");
+      return;
+    }
+
+    // Simulasi pengiriman email ke server (nanti bisa diganti dengan API call)
+    toast.success("Subscribe Susscess ");
+
+    // Kosongkan input setelah submit
+    setEmail('');
+  };
+
   return (
     <div className='pt-10 px-4 md:px-20 lg:px-32 bg-gray-900 w-full overflow-hidden' id='Footer'> 
         <div className='container mx-auto flex flex-col md:flex-row justify-between items-center'>
             <div className='w-full md:w-1/3 mb-8 md:mb-0'>
                 <img src={assets.logo_dark} alt=""  className="w-60 h-auto"/>
-                <p className='text-gray-400 mt-4'>Embark on un unforgettable adventure in Sembalun and uncover the nature winders of Lombok.</p>
+                <p className='text-gray-400 mt-4'>Embark on an unforgettable adventure in Sembalun and uncover the natural wonders of Lombok.</p>
             </div>
             <div className='w-full md:w-1/5 mb-8 md:mb-0'>
                 <h3 className='text-white text-lg font-bold mb-4'>Company</h3>
@@ -19,12 +35,23 @@ const Footer = () => {
                 </ul>
             </div>
             <div className='w-full md:w-1/3'>
-            <h3 className='text-white text-lg font-bold mb-4'>Subscribe to our newsletter</h3>
-            <p className='text-gray-400 mb-4 max-w-80'>The latest news, Articles, and resources, sent to your inbox weekly.</p>
-            <div className='flex gap-2'>
-                <input type="email" placeholder="Enter your Email" className='p-2 rounded bg-gray-800 text-gray-400 border border-gray-700 focus:outline-none w-full md:w-auto'/>
-                <button className='py-2 px-4 rounded bg-blue-500 text-white'>Subscribe</button>
-            </div>
+                <h3 className='text-white text-lg font-bold mb-4'>Subscribe to our newsletter</h3>
+                <p className='text-gray-400 mb-4 max-w-80'>The latest news, articles, and resources, sent to your inbox weekly.</p>
+                <div className='flex gap-2'>
+                    <input 
+                        type="email" 
+                        placeholder="Enter your Email" 
+                        className='p-2 rounded bg-gray-800 text-gray-400 border border-gray-700 focus:outline-none w-full md:w-auto'
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <button 
+                        className='py-2 px-4 rounded bg-blue-500 text-white hover:bg-blue-600 transition'
+                        onClick={handleSubscribe}
+                    >
+                        Subscribe
+                    </button>
+                </div>
             </div>
         </div>
         <div className='border-t border-gray-700 py-4 mt-10 text-center text-gray-500'>
@@ -34,4 +61,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

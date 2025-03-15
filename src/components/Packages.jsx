@@ -148,7 +148,7 @@ const Packages = () => {
             <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
                 <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white dark:text-white dark:bg-gray-800">
-                package price list
+                {selectedPackage.title} package price list
                         <p class="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">For orders of more than 6 people, please contact us directly on WhatsApp.</p>
                     </caption>
                     <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -186,7 +186,36 @@ const Packages = () => {
                 </table>
             </div>
             <div className='text-left'>
-            <button type="button" className="mt-5 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Booking Now</button>
+            <button
+  type="button"
+  onClick={() => {
+    const phoneNumber = "6283129416643"; // Ganti dengan nomor WA tujuan
+    const message = `  Halo, saya ingin memesan paket ${selectedPackage.title}.
+
+    Harap tulis email anda : 
+
+    Hapus paket yang tidak di perlukan!
+    
+    Detail Paket:
+    - Paket untuk : ${selectedPackage.desk1}
+    - Rute: ${selectedPackage.route}
+    - Deskripsi: ${selectedPackage.desk}
+    - Harga:
+     * 1 Orang: ${selectedPackage.price1}
+     * 2-3 Orang: ${selectedPackage.price2}
+     * 4-5 Orang: ${selectedPackage.price3}
+     * 6-7 Orang: ${selectedPackage.price4}
+
+    Silakan berikan detail lebih lanjut. Terima kasih!`;
+
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+  }}
+  className="mt-5 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+>
+  Booking Now
+</button>
+
             </div>
             </div>
                             </div>
