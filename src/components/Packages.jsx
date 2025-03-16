@@ -125,7 +125,7 @@ const Packages = () => {
                             <div className='font-light text-gray-500 sm:text-lg dark:text-gray-400'>
                                 <h2 className='text-left mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white'>{selectedPackage.title}</h2>
                                 <p className='text-left'>{selectedPackage.desk} - {selectedPackage.route}</p>
-                                <p className='text-left'>{selectedPackage.desk1}</p>
+                                <p className='text-left font-bold '>{selectedPackage.desk1}</p>
                                 <div className='mt-2'>
                                 <h2 class="text-left mb-2 text-lg font-semibold text-gray-900 dark:text-white">Includes:</h2>
                 <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
