@@ -197,7 +197,7 @@ const Packages = () => {
     Hapus paket yang tidak di perlukan!
     
     Detail Paket:
-    - Paket untuk : ${selectedPackage.desk1}
+    - Paket untuk : ${selectedPackage.desk1}c
     - Rute: ${selectedPackage.route}
     - Deskripsi: ${selectedPackage.desk}
     - Harga:
