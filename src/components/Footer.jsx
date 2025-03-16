@@ -11,10 +11,9 @@ const Footer = () => {
       return;
     }
 
-    // Simulasi pengiriman email ke server (nanti bisa diganti dengan API call)
+   
     toast.success("Subscribe Susscess ");
 
-    // Kosongkan input setelah submit
     setEmail('');
   };
 

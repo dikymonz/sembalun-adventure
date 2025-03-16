@@ -83,12 +83,25 @@ const Packages = () => {
             className="relative flex-shrink-0 w-full sm:w-1/4 snap-start"
             onClick={() => setSelectedPackage(project)}
           >
-            <img src={project.image1} alt={project.title} className="w-full h-auto mb-14" />
+          <div className="relative">
+        <img src={project.image1} alt={project.title} className="w-full h-auto mb-14 rounded" />
+
+        {/* Tag pertama di pojok kanan atas */}
+        <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+          {project.desk1}
+        </div>
+
+        {/* Tag kedua di bawah tag pertama */}
+        <div className="absolute top-10 right-2 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded">
+          {project.route}
+        </div>
+      </div>
+            
             <div className="absolute left-0 right-0 bottom-5 flex justify-center">
               <div className="inline-block bg-white w-3/4 px-4 py-2 shadow-md rounded ">
                 <h2 className="text-xl font-semibold text-gray-800">{project.title}</h2>
                 <p className="text-gray-500 text-sm">
-                  {project.desk} <span className="font-bold">{project.desk1}</span>
+                  <span className="font-bold">{project.desk}</span>
                 </p>
               </div>
             </div>
