@@ -113,7 +113,7 @@ const Packages = () => {
        {selectedPackage && (
         <div className='fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50'>
             {/* Tombol Close */}
-            <section className='bg-white dark:bg-gray-900 text-center p-6 py-20 lg:px-32 w-full overflow-y-auto max-h-screen' id='detail'>
+            <section className='bg-white dark:bg-gray-900 p-6 py-20 lg:px-32 w-full overflow-y-auto max-h-screen' id='detail'>
                 
                         <div className='gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6'>
                         <button
