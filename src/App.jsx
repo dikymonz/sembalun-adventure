@@ -9,6 +9,7 @@ import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer'
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Galery from './Pages/Galery'
 
 const App = () => {
   return (
@@ -17,7 +18,7 @@ const App = () => {
       <Header/>
 
       <Routes>
-      <Route path="/detail/:id" element={<DetailPackages />} />
+      <Route path="/Galery" element={<Galery />} />
       </Routes>
 
       <About/>

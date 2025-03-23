@@ -38,6 +38,8 @@ const Packages = () => {
     project.route.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  
+
   return (
     <motion.div
       initial={{ opacity: 0, x: -200 }}
@@ -113,7 +115,7 @@ const Packages = () => {
               onClick={() => setSelectedPackage(project)}
             >
               <div className="relative">
-                <img src={project.image1} alt={project.title} className="w-full h-auto mb-14 rounded" />
+                <img src={project.image1} alt={project.title} className="w-full h-auto mb-14 rounded " />
                 <div className="absolute top-2 right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
                   {project.desk1}
                 </div>
@@ -250,32 +252,36 @@ const Packages = () => {
             <button
   type="button"
   onClick={() => {
-    const phoneNumber = "6283129416643"; // Ganti dengan nomor WA tujuan
-    const message = `  Halo, saya ingin memesan paket ${selectedPackage.title}.
+    const phoneNumber = "6287777335813";
+    const message = `
+Hello, I would like to book the ${selectedPackage.title} package.
 
-    Harap tulis email anda : 
+Please provide your email:
 
-    Hapus paket yang tidak di perlukan!
-    
-    Detail Paket:
-    - Paket untuk : ${selectedPackage.desk1}c
-    - Rute: ${selectedPackage.route}
-    - Deskripsi: ${selectedPackage.desk}
-    - Harga:
-     * 1 Orang: ${selectedPackage.price1}
-     * 2-3 Orang: ${selectedPackage.price2}
-     * 4-5 Orang: ${selectedPackage.price3}
-     * 6-7 Orang: ${selectedPackage.price4}
+Remove any unnecessary packages!
 
-    Silakan berikan detail lebih lanjut. Terima kasih!`;
+Package Details:
+- Package for: ${selectedPackage.desk1}
+- Route: ${selectedPackage.route}
+- Description: ${selectedPackage.desk}
+- Price:
+  * 1 Person: ${selectedPackage.price1}
+  * 2-3 People: ${selectedPackage.price2}
+  * 4-5 People: ${selectedPackage.price3}
+  * 6-7 People: ${selectedPackage.price4}
+
+Please provide further details. Thank you!`;
 
     const encodedMessage = encodeURIComponent(message);
     window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   }}
-  className="mt-5 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+  className="mt-5 text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl 
+             focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 
+             font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
 >
   Booking Now
 </button>
+
 
             </div>
             </div>

@@ -30,6 +30,8 @@ useEffect(()=>{
                 <a href="/" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Home</a>
                 <a href="#About" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>About</a>
                 <a href="#Packages" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Packages</a>
+                <a href="/Galery#Galeri" className="cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 transition-all ease-in-out">Galeri</a>
+
             </ul>
             <button 
     className='hidden md:block bg-white px-8 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all ease-in-out'  
@@ -46,6 +48,7 @@ useEffect(()=>{
                 <a onClick={()=> setShowMobileMenu(false)} href="#Header" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>Home</a>
                 <a onClick={()=> setShowMobileMenu(false)} href="#About" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>About</a>
                 <a onClick={()=> setShowMobileMenu(false)} href="#Packages" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>Packages</a>
+                <a onClick={()=> setShowMobileMenu(false)} href="/Galery#Galeri" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>Galery</a>
                 
             </ul>
         </div>
