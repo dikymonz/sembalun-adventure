@@ -7,7 +7,8 @@ const Galery = () => {
   const images = [
     assets.image1, assets.image2, assets.image3, assets.image4,
     assets.image5, assets.image6, assets.image7, assets.image8,
-    assets.image9, assets.image10, assets.image11, assets.image12, assets.image13
+    assets.image9, assets.image10, assets.image11, assets.image12, assets.image13,
+    assets.image14
   ];
 
   return (
