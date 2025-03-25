@@ -19,6 +19,10 @@ import rinjani_7 from './rinjani7.jpg'
 import labuan_bajo_1 from './labuan_bajo1.jpg'
 import labuan_bajo_2 from './labuan_bajo2.jpg'
 
+import bromo_1 from './bromo1.jpg'
+import bromo_2 from './bromo2.jpg'
+import bromo_3 from './bromo3.jpg'
+
 import gili_1 from './gili1.jpg'
 
 import strawberry1 from './strawberry1.jpg'
@@ -44,6 +48,9 @@ export const assets = {
     image8: labuan_bajo_2,
     image9: gili_1,
     image10: strawberry1,
+    image11: bromo_1,
+    image12: bromo_2,
+    image13: bromo_3,
     left_arrow,
     right_arrow,
 }
@@ -245,5 +252,30 @@ export const projectsData = [
       image1: labuan_bajo_1,
       image2: labuan_bajo_2,
     },
-    
+    {
+      id:"8",
+      title: "Trip Mt. Bromo",
+      desk: "",
+      desk1: "Package tour minimum 2 packs",
+      route: "East Java ",
+      include1: "•transport + fuel + driver",
+      include2: "•Jeep + entrance fee",
+      include3: "•local tour guide + fotographer",
+      include4: "•tol fee + parking fee",
+      include5: "•entrance fee all destination",
+      include6: "•Snack + water",
+      person1 : "2D/1N",
+      person2 : "3D/2N",
+      person3 : "4D/3N",
+      person4 : "5D/4N",
+      person5 : "6D/5N",
+      price1: "2.000.000 IDR/pack",
+      price2: "2.750.000 IDR/pack",
+      price3: "3.500.000 IDR/pack",
+      price4: "3.750.000 IDR/pack",
+      price5: "4.000.000 IDR/pack",
+      location: "East Java",
+      image1: bromo_1,
+      image2: bromo_2,
+    },
 ];

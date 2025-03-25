@@ -18,11 +18,12 @@ const App = () => {
       <Header/>
 
       <Routes>
-      <Route path="/Galery" element={<Galery />} />
+     
       </Routes>
 
       <About/>
       <Packages/>
+      <Galery />
       <Contact/>
       <Footer/>
     </div>

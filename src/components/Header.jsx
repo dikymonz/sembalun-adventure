@@ -16,15 +16,20 @@ const Header = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    },5000); // Ganti setiap 5 detik
+    }, 5000); // Ganti gambar setiap 5 detik
 
     return () => clearInterval(interval);
   }, []);
 
   return (
     <div
-      className='min-h-screen mb-4 bg-cover bg-center flex items-center w-full overflow-hidden transition-all duration-1000'
-      style={{ backgroundImage: `url(${images[currentImage]})` }}
+      className='relative min-h-screen mb-4 bg-cover bg-center flex items-center w-full overflow-hidden transition-all duration-1000'
+      style={{
+        backgroundImage: `url(${images[currentImage]})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        transition: 'background-image 1s ease-in-out'
+      }}
       id='Header'
     >
       <Navbar />
