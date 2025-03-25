@@ -20,26 +20,49 @@ const Galery = () => {
         Immortalize your moment with Sembalun Adventure
       </p>
 
-      {/* Wrapper untuk slider */}
-      <div className="w-full overflow-hidden relative">
+      {/* Baris pertama - Animasi ke kiri */}
+      <div className="relative w-full overflow-hidden mb-4">
         <motion.div
-          className="flex space-x-4 w-max"
+          className="flex space-x-4 w-max flex-nowrap"
           animate={{ x: ["0%", "-100%"] }}
           transition={{
-            repeat: Infinity,   // Animasi terus berjalan tanpa henti
-            repeatType: "loop", // Looping otomatis
-            ease: "linear",     // Gerakan smooth
-            duration: 60        // Memperlambat animasi (semakin besar, semakin lambat)
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+            duration: 60
           }}
         >
-          {/* Duplikasi gambar untuk seamless loop */}
-          {images.concat(images).map((img, index) => (
+          {[...images, ...images].map((img, index) => (
             <img
               key={index}
               src={img}
               alt={`Gallery Image ${index + 1}`}
               className="h-auto rounded-lg shadow-lg 
-                        w-[50vw] sm:w-[30vw] md:w-[20vw] lg:w-[15vw]"
+                        w-[50vw] sm:w-[30vw] md:w-[20vw] lg:w-[12vw]"
+            />
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Baris kedua - Animasi ke kanan */}
+      <div className="relative w-full overflow-hidden">
+        <motion.div
+          className="flex space-x-4 w-max flex-nowrap"
+          animate={{ x: ["-100%", "0%"] }} // Berlawanan arah dengan baris pertama
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "linear",
+            duration: 60
+          }}
+        >
+          {[...images, ...images].map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Gallery Image ${index + 1}`}
+              className="h-auto rounded-lg shadow-lg 
+                        w-[50vw] sm:w-[30vw] md:w-[20vw] lg:w-[12vw]"
             />
           ))}
         </motion.div>

@@ -220,13 +220,13 @@ const Packages = () => {
                             {selectedPackage.person1}
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                2-3 Person
+                            {selectedPackage.person2}
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                4-5 Person
+                            {selectedPackage.person3}
                             </th>
                             <th scope="col" class="px-6 py-3">
-                                6-7 Person
+                            {selectedPackage.person4}
                             </th>
                         </tr>
                     </thead>

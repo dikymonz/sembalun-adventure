@@ -255,8 +255,8 @@ export const projectsData = [
     {
       id:"8",
       title: "Trip Mt. Bromo",
-      desk: "",
-      desk1: "Package tour minimum 2 packs",
+      desk: "Package tour minimum 2 packs",
+      desk1: "Populal Trip Package",
       route: "East Java ",
       include1: "•transport + fuel + driver",
       include2: "•Jeep + entrance fee",
