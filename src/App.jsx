@@ -21,9 +21,9 @@ const App = () => {
      
       </Routes>
 
-      <About/>
       <Packages/>
       <Galery />
+      <About/>
       <Contact/>
       <Footer/>
     </div>

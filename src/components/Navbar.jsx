@@ -28,9 +28,9 @@ useEffect(()=>{
             <img src={assets.logo} alt="" className="w-60 h-auto cursor-pointer" />
             <ul className='hidden md:flex gap-7 text-white'>
                 <a href="/" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Home</a>
-                <a href="#About" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>About</a>
                 <a href="#Packages" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Packages</a>
                 <a href="#Galeri" className="cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 transition-all ease-in-out">Galeri</a>
+                <a href="#About" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>About</a>
 
             </ul>
             <button 
@@ -46,9 +46,9 @@ useEffect(()=>{
             </div>
             <ul className='flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium'>
                 <a onClick={()=> setShowMobileMenu(false)} href="#Header" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>Home</a>
-                <a onClick={()=> setShowMobileMenu(false)} href="#About" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>About</a>
                 <a onClick={()=> setShowMobileMenu(false)} href="#Packages" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>Packages</a>
                 <a onClick={()=> setShowMobileMenu(false)} href="#Galeri" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>Galery</a>
+                <a onClick={()=> setShowMobileMenu(false)} href="#About" className='px-4 py-2 rounded-full inline-block hover:font-bold transition-all ease-in-out'>About</a>
                 
             </ul>
         </div>
