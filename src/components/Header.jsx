@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from './Navbar';
+import React, { useState, useEffect } from "react";
+import Navbar from "./Navbar";
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const images = {
-  morning: "/hero.jpg",    // 07:00 - 11:59
+  morning: "/hero.jpg", // 07:00 - 11:59
   afternoon: "/hero1.jpg", // 12:00 - 17:59
-  evening: "/hero2.jpg",   // 18:00 - 23:59
-  night: "/hero3.jpg"      // 00:00 - 06:59
+  evening: "/hero2.jpg", // 18:00 - 23:59
+  night: "/hero3.jpg", // 00:00 - 06:59
 };
 
 // Fungsi untuk mendapatkan gambar sesuai jam sekarang
@@ -35,13 +35,13 @@ const Header = () => {
 
   return (
     <div
-      className='relative min-h-screen mb-4 bg-cover bg-center flex items-center w-full overflow-hidden transition-all duration-1000'
+      className="relative min-h-screen mb-4 bg-cover bg-center flex items-center w-full overflow-hidden transition-all duration-1000"
       style={{
         backgroundImage: `url(${currentImage})`,
-        willChange: 'background-image',
-        backfaceVisibility: 'hidden'
+        willChange: "background-image",
+        backfaceVisibility: "hidden",
       }}
-      id='Header'
+      id="Header"
     >
       <Navbar />
       <motion.div
@@ -49,19 +49,19 @@ const Header = () => {
         transition={{ duration: 1.5 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className='container text-center mx-auto py-4 px-6 md:px-20 lg:px-32 text-white'
-        style={{ willChange: 'opacity, transform' }}
+        className="container text-center mx-auto py-4 px-6 md:px-20 lg:px-32 text-white"
+        style={{ willChange: "opacity, transform" }}
       >
-        <h2 className='text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20'>
+        <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
           Lombok Adventure Consultant
         </h2>
-        <div className='space-x-6 mt-16'>
-          <a href='#Packages' className='bg-blue-500 px-8 py-3 rounded'>
+        <div className="space-x-6 mt-16">
+          <a href="#Packages" className="bg-blue-500 px-8 py-3 rounded">
             Package
           </a>
           <a
-            href='#Contacts'
-            className='border border-white px-8 py-3 rounded hover:bg-blue-500 transition-all ease-in-out'
+            href="#Contacts"
+            className="border border-white px-8 py-3 rounded hover:bg-blue-500 transition-all ease-in-out"
           >
             Contact Us
           </a>
