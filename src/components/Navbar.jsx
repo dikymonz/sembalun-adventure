@@ -28,7 +28,7 @@ useEffect(()=>{
             <img src={assets.logo} alt="" className="w-60 h-auto cursor-pointer" />
             <ul className='hidden md:flex gap-7 text-white'>
                 <a href="/" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Home</a>
-                <a href="#Packages" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Packages</a>
+                <a href="#Packnpm i react-type-animationages" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>Packages</a>
                 <a href="#Galeri" className="cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 transition-all ease-in-out">Galeri</a>
                 <a href="#About" className='cursor-pointer hover:text-gr-400 hover:font-bold hover:underline underline-offset-4 under transition-all ease-in-out'>About</a>
 
