@@ -3,11 +3,11 @@
     -webkit-overflow-scrolling: touch;
   }
 .scroll-container {
-    -ms-overflow-style: none; /* Untuk Internet Explorer dan Edge */
-    scrollbar-width: none; /* Untuk Firefox */
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
 }
   
   .scroll-container::-webkit-scrollbar {
-    display: none; /* Untuk Chrome, Safari, dan Opera */
+    display: none; 
   }
     
