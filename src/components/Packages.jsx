@@ -10,19 +10,18 @@ const Packages = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [searchTerm, setSearchTerm] = useState(""); // State untuk pencarian
 
-  // Fungsi geser ke kiri
-  const prevProject = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
-  };
-
-  // Fungsi geser ke kanan
   const nextProject = () => {
     if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      scrollContainerRef.current.scrollBy({ left: scrollContainerRef.current.clientWidth / 3, behavior: "smooth" });
     }
   };
+  
+  const prevProject = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -scrollContainerRef.current.clientWidth / 3, behavior: "smooth" });
+    }
+  };
+  
 
   // Fungsi swipe gesture
   const handlers = useSwipeable({
@@ -109,7 +108,7 @@ const Packages = () => {
           filteredProjects.map((project, index) => (
             <div
               key={index}
-              className="relative flex-shrink-0 w-full sm:w-1/4 snap-start"
+              className="relative flex-shrink-0 w-full sm:w-1/4 snap-start cursor-pointer "
               onClick={() => setSelectedPackage(project)}
             >
               <div className="relative">
@@ -171,53 +170,11 @@ const Packages = () => {
                   <h2 class="text-left mb-2 text-lg font-semibold text-gray-900 dark:text-white">
                     Includes:
                   </h2>
-                  <ul className="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
-                    <li className="flex items-center">
-                      {selectedPackage.include1}
+                  {Array.from({ length: 20 }, (_, i) => (
+                    <li key={i} className="flex items-center">
+                      {selectedPackage[`include${i + 1}`]}
                     </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include2}
-                    </li>
-                    <li className="flex items-center ">
-                      {selectedPackage.include3}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include4}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include5}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include6}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include7}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include8}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include9}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include10}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.includ11}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include12}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include13}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include14}
-                    </li>
-                    <li className="flex items-center">
-                      {selectedPackage.include15}
-                    </li>
-                  </ul>
+                  ))}
 
                   {/* table prices */}
 
@@ -231,30 +188,22 @@ const Packages = () => {
                             directly on WhatsApp.
                           </p>
                         </caption>
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <thead>
                           <tr>
-                            <th scope="col" class="px-6 py-3">
-                              {selectedPackage.person1}
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                              {selectedPackage.person2}
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                              {selectedPackage.person3}
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                              {selectedPackage.person4}
-                            </th>
+                            {Array.from({ length: 4 }, (_, i) => (
+                              <th key={i} className="px-6 py-3 bg-gray-400 text-gray-900">
+                                {selectedPackage[`person${i + 1}`]}
+                              </th>
+                            ))}
                           </tr>
                         </thead>
                         <tbody>
-                          <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-                            <td scope="row" class="px-6 py-4">
-                              {selectedPackage.price1}
-                            </td>
-                            <td class="px-6 py-4">{selectedPackage.price2}</td>
-                            <td class="px-6 py-4">{selectedPackage.price3}</td>
-                            <td class="px-6 py-4">{selectedPackage.price4}</td>
+                          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
+                            {Array.from({ length: 4 }, (_, i) => (
+                              <td key={i} className="px-6 py-4">
+                                {selectedPackage[`price${i + 1}`]}
+                              </td>
+                            ))}
                           </tr>
                         </tbody>
                       </table>

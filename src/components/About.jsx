@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
+
 const About = () => {
   return (
     <motion.div
@@ -65,7 +66,7 @@ const About = () => {
             from various backgrounds.
           </p>
           <button
-            className="bg-blue-600 text-white px-8 py-2 rounded"
+            className="bg-gray-400 px-8 py-3 text-gray-900 opacity-80 hover:opacity-100 transition-all ease-in-out duration-300 rounded-full"
             onClick={() =>
               window.open(
                 "https://www.instagram.com/sembalun_adventure/",

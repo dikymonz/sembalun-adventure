@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
+import ShinyText from "./ShinyText";
 
 const images = {
   morning: "/hero.jpg", // 07:00 - 11:59
@@ -52,16 +53,25 @@ const Header = () => {
         className="container text-center mx-auto py-4 px-6 md:px-20 lg:px-32 text-white"
         style={{ willChange: "opacity, transform" }}
       >
-        <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
+        <ShinyText
+          text="Lombok Adventure Consultant"
+          disabled={false}
+          speed={5}
+          className="custom-class text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20"
+        />
+        {/* <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
           Lombok Adventure Consultant
-        </h2>
+        </h2> */}
         <div className="space-x-6 mt-16">
-          <a href="#Packages" className="bg-blue-500 px-8 py-3 rounded">
+          <a
+            href="#Packages"
+            className="bg-gray-400 px-8 py-3 rounded text-gray-900 opacity-80 hover:opacity-100 transition-all ease-in-out duration-300"
+          >
             Package
           </a>
           <a
             href="#Contacts"
-            className="border border-white px-8 py-3 rounded hover:bg-blue-500 transition-all ease-in-out"
+            className="border border-gray-400 px-8 py-3 text-gray-400 rounded bg-transparent transition-all ease-in-out hover:bg-gray-400 hover:text-gray-900 opacity-100 hover:opacity-60 duration-300"
           >
             Contact Us
           </a>

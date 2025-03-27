@@ -84,7 +84,7 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <button className="bg-blue-600 text-white py-2 px-12 mb-10 rounded hover:bg-white hover:border brder-blue-600 hover:text-blue-600 hover:shadow-md hover:transition-all ease-in-out">
+        <button className="bg-gray-400 px-8 py-3 rounded-md text-gray-900 opacity-80 hover:opacity-100 transition-all ease-in-out duration-300">
           {result ? result : "Send Message"}
         </button>
       </form>
