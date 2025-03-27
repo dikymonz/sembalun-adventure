@@ -17,8 +17,10 @@ const Footer = () => {
     const publicKey = "XsbsqCWfrVaTiqDEI";
 
     const templateParams = {
+    
+      title: "Sembalun Adventure",
       user_email: email,
-      user_name: "Subscriber", // Tambahkan nama jika diperlukan oleh template
+      user_name: email, // Tambahkan nama jika diperlukan oleh template
       admin_email: "diky.monz03@gmail.com",
     };
 
