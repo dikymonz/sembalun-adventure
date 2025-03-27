@@ -59,9 +59,7 @@ const Header = () => {
           speed={5}
           className="custom-class text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20"
         />
-        {/* <h2 className="text-5xl sm:text-6xl md:text-[82px] inline-block max-w-3xl font-semibold pt-20">
-          Lombok Adventure Consultant
-        </h2> */}
+       
         <div className="space-x-6 mt-16">
           <a
             href="#Packages"
