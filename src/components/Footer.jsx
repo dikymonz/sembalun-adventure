@@ -21,7 +21,7 @@ const Footer = () => {
       title: "Sembalun Adventure",
       user_email: email,
       user_name: email, // Tambahkan nama jika diperlukan oleh template
-      admin_email: "diky.monz03@gmail.com",
+      admin_email: "bagasventure@gmail.com",
     };
 
     console.log("Sending email with params:", templateParams);
