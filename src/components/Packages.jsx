@@ -21,7 +21,6 @@ const Packages = () => {
       scrollContainerRef.current.scrollBy({ left: -scrollContainerRef.current.clientWidth / 3, behavior: "smooth" });
     }
   };
-  
 
   // Fungsi swipe gesture
   const handlers = useSwipeable({

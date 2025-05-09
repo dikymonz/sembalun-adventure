@@ -12,25 +12,41 @@ const Footer = () => {
       return;
     }
 
+    // EmailJS Configuration
     const serviceID = "service_d309tw2";
-    const templateID = "template_auxj0h9";
+    const templateSubscribeID = "template_auxj0h9"; // Template untuk admin
+    const templateAutoReplyID = "template_upbw3ms"; // Template auto-reply ke user
     const publicKey = "XsbsqCWfrVaTiqDEI";
 
     const templateParams = {
-    
       title: "Sembalun Adventure",
-      user_email: email,
-      user_name: email, // Tambahkan nama jika diperlukan oleh template
+      user_email: email, // Penerima auto-reply
+      user_name: email, // Bisa diubah dengan input nama jika ada
       admin_email: "bagasventure@gmail.com",
+      reply_to: email, // Untuk memastikan auto-reply terkirim ke user
     };
 
-    console.log("Sending email with params:", templateParams);
+    console.log("Sending subscription email with params:", templateParams);
 
+    // Kirim email notifikasi ke admin
     emailjs
-      .send(serviceID, templateID, templateParams, publicKey)
+      .send(serviceID, templateSubscribeID, templateParams, publicKey)
       .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
+        console.log("SUCCESS! Email to admin:", response.status, response.text);
         toast.success("Subscribed successfully! 🎉");
+
+        // Kirim auto-reply ke user
+        emailjs
+          .send(serviceID, templateAutoReplyID, templateParams, publicKey)
+          .then((response) => {
+            console.log("Auto-reply sent!", response.status, response.text);
+            toast.success("Auto-reply sent to your email! 📩");
+          })
+          .catch((error) => {
+            console.error("Auto-reply failed...", error);
+            toast.error(`Auto-reply failed: ${error.text || error.message || "Unknown error"}`);
+          });
+
         setEmail(""); // Reset input setelah sukses
       })
       .catch((error) => {
@@ -39,7 +55,7 @@ const Footer = () => {
       });
   };
 
-  // Validasi format email yang lebih ketat
+  // Validasi format email
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
