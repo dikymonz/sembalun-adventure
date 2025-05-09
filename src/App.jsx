@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Galery from "./Pages/Galery";
+import Hot from "./components/Hot";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
 
       <Routes></Routes>
 
+      <Hot />
       <Packages />
       <Galery />
       <About />

@@ -54,7 +54,7 @@ const Navbar = () => {
           </a>
         </ul>
         <button
-          className="hidden md:block bg-white px-8 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all ease-in-out"
+          className="hidden md:block bg-white px-8 py-2 rounded-full hover:bg-green-500 hover:text-white transition-all ease-in-out"
           onClick={() => window.open("https://wa.me/6287777335813", "_blank")}
         >
           WhatsApp
