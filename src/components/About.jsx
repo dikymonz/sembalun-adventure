@@ -38,7 +38,7 @@ const About = () => {
               <p className="text-4xl font-medium text-gray-800">
                 <BsWhatsapp />
               </p>
-              <p className="">+62 877-7733-5813</p>
+              <p className="">+62 877-7733-5813 <br /> +62 891-7944-929</p>
             </div>
             <div>
               <p className="text-4xl font-medium text-gray-800">
@@ -59,9 +59,9 @@ const About = () => {
               <p className="">bagasventure@gmail.com</p>
             </div>
           </div>
-          <p className="my-10 max-w-lg ">
-          Sembalun Adventure is a local tour operator specializing in outdoor adventures and cultural experiences in Sembalun, Lombok. We offer guided trekking tours to Mount Rinjani, nature excursions, and village tours to showcase the beauty and traditions of the region. Our experienced team is dedicated to providing safe, memorable, and authentic adventures for nature lovers and travelers seeking to explore Lombok’s stunning landscapes. Whether you're hiking to the Rinjani summit or exploring Sembalun’s rich culture, we ensure an unforgettable journey.
-          </p>
+         <p className="my-10 max-w-lg text-justify">
+  Sembalun Adventure is a local tour operator specializing in outdoor adventures and cultural experiences in Sembalun, Lombok. We offer guided trekking tours to Mount Rinjani, nature excursions, and village tours to showcase the beauty and traditions of the region. Our experienced team is dedicated to providing safe, memorable, and authentic adventures for nature lovers and travelers seeking to explore Lombok’s stunning landscapes. Whether you're hiking to the Rinjani summit or exploring Sembalun’s rich culture, we ensure an unforgettable journey.
+</p>
           <div className="gap-6 md:gap-10 w-full 2xl:pr-28">
             <div>
               <p className="text-4xl font-medium text-gray-800">

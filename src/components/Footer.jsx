@@ -108,8 +108,17 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="border-t border-gray-700 py-4 mt-10 text-center text-gray-500">
-        Copyright 2025 © Sembalun Adventure - Dikymonz. All Right Reserved.
-      </div>
+  Copyright 2025 © Sembalun Adventure -{' '}
+  <a
+    href="https://instagram.com/dikymonz03"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-blue-400 hover:text-blue-600 transition"
+  >
+    Dikymonz
+  </a>. All Rights Reserved.
+</div>
+
     </footer>
   );
 };
