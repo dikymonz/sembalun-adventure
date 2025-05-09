@@ -2,7 +2,7 @@ import React from "react";
 import { assets } from "../assets/assets";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
-import { BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
+import { BsInstagram, BsMap, BsTiktok, BsWhatsapp } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 
 
@@ -60,13 +60,19 @@ const About = () => {
             </div>
           </div>
           <p className="my-10 max-w-lg ">
-            Lombok Tour & Travel is a company engaged in providing travel
-            services on Lombok Island, Indonesia. We provide various travel
-            packages designed to meet the needs and preferences of travelers
-            from various backgrounds.
+          Sembalun Adventure is a local tour operator specializing in outdoor adventures and cultural experiences in Sembalun, Lombok. We offer guided trekking tours to Mount Rinjani, nature excursions, and village tours to showcase the beauty and traditions of the region. Our experienced team is dedicated to providing safe, memorable, and authentic adventures for nature lovers and travelers seeking to explore Lombok’s stunning landscapes. Whether you're hiking to the Rinjani summit or exploring Sembalun’s rich culture, we ensure an unforgettable journey.
           </p>
+          <div className="gap-6 md:gap-10 w-full 2xl:pr-28">
+            <div>
+              <p className="text-4xl font-medium text-gray-800">
+                <BsMap />
+              </p>
+              <p className="">Sembalun, Lombok, Indonesia</p>
+            </div>
+            
+          </div>
           <button
-            className="bg-gray-400 px-8 py-3 text-gray-900 opacity-80 hover:opacity-100 transition-all ease-in-out duration-300 rounded-full"
+            className="bg-gray-400 mt-2 px-8 py-3 text-gray-900 opacity-80 hover:opacity-100 transition-all ease-in-out duration-300 rounded-full"
             onClick={() =>
               window.open(
                 "https://www.instagram.com/sembalun_adventure/",

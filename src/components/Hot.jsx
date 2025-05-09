@@ -34,7 +34,7 @@ const Hot = () => {
   const whatsappText = encodeURIComponent(
     `Halo! Saya ingin memesan ${hotPackages[activeIndex].title} seharga ${hotPackages[activeIndex].price}.`
   );
-  const whatsappLink = `https://wa.me/6283129416643?text=${whatsappText}`;
+  const whatsappLink = `https://wa.me/6287777335813?text=${whatsappText}`;
 
   const handleImageClick = (image) => {
     setModalImage(image);
@@ -66,7 +66,7 @@ const Hot = () => {
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 10000, disableOnInteraction: false }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             className="w-4/5 h-full"
           >
             {hotPackages.map((pkg, index) => (
